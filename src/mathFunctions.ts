@@ -17,3 +17,15 @@ export function abs(x: number): number {
     total = total - min;
     return scores.length > 1 ? total / (scores.length - 1) : 0; 
  }
+
+ export function badFunction() {
+  let a = "Hello";
+  a  = "";
+  if (true) {
+    console.log("ok");
+  }
+  else {
+    console.log("ko");
+  }
+  
+ }
