@@ -18,14 +18,22 @@ export function abs(x: number): number {
     return scores.length > 1 ? total / (scores.length - 1) : 0; 
  }
 
- export function badFunction() {
-  let a = "Hello";
-  a  = "";
-  if (true) {
-    console.log("ok");
-  }
-  else {
-    console.log("ko");
-  }
+ export function badFunction(input: any): any {
+  let data = input;
+  let result = 0;
+  let a = 10, b = 20;
+  data.forEach((d: any) => {
+      if (d.someProp == undefined) {
+          console.log("Errore: proprietà mancante");
+          result += a * b;
+      } else {
+          result += d.someProp;
+      }
+  });
+  globalVar = result;
+  console.log("Il risultato è: " + result);
+  return result;
+}
+
+var globalVar = 0;
   
- }
